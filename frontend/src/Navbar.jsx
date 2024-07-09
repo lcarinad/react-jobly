@@ -1,29 +1,35 @@
 import React from "react";
+import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { Navbar, Nav, NavItem } from "reactstrap";
 
-function Navbar() {
+function NavBar() {
   return (
-    <nav>
-      <NavLink exact to="/">
-        Home
-      </NavLink>
-      <NavLink exact to="/companies">
-        Companies
-      </NavLink>
-      <NavLink exact to="/jobs">
-        Jobs
-      </NavLink>
-      <NavLink exact to="/login">
-        Login
-      </NavLink>
-      <NavLink exact to="/signup">
-        Signup
-      </NavLink>
-      <NavLink exact to="/profile">
-        profile
-      </NavLink>
-    </nav>
+    <div>
+      <Navbar className="navbar" navbar expand="md">
+        <NavItem>
+          <NavLink exact="true" to="/">
+            Home
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/companies">Companies</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/jobs">Jobs</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/login">Login</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/signup">Signup</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/profile">profile</NavLink>
+        </NavItem>
+      </Navbar>
+    </div>
   );
 }
 
-export default Navbar;
+export default NavBar;
