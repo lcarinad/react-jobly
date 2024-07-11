@@ -8,11 +8,15 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Profile from "./Profile";
 
-function AppRoutes() {
+function AppRoutes({ companies }) {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/companies" element={<Companies />} />
+      <Route
+        exact
+        path="/companies"
+        element={<Companies companies={companies} />}
+      />
       <Route exact path="/companies/:handle" element={<Company />} />
       <Route exact path="/jobs" element={<Jobs />} />
       <Route exact path="/login" element={<Login />} />
